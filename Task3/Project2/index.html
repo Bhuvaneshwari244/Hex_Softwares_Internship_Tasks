@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLib | Personal Book Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">📚 MyLib</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by title or author...">
+            <button id="search-btn">🔍</button>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+            <button id="add-book-btn" class="btn primary-btn">+ Add Book</button>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul id="category-list" class="category-list">
+                <li class="active" data-category="All">All Books</li>
+                <li data-category="Fiction">Fiction</li>
+                <li data-category="Non-Fiction">Non-Fiction</li>
+                <li data-category="Science">Science & Tech</li>
+                <li data-category="Fantasy">Fantasy</li>
+                <li data-category="Biography">Biography</li>
+            </ul>
+        </aside>
+
+        <section class="book-content">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h4>Total Books</h4>
+                    <p id="stat-total">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Available</h4>
+                    <p id="stat-available" class="text-success">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Borrowed</h4>
+                    <p id="stat-borrowed" class="text-warning">0</p>
+                </div>
+            </div>
+
+            <div class="content-header">
+                <h2 id="current-category-title">All Books</h2>
+            </div>
+            
+            <div id="book-grid" class="book-grid">
+                </div>
+        </section>
+    </main>
+
+    <div id="add-book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-add-modal">&times;</span>
+            <h2>Add New Book</h2>
+            <form id="add-book-form">
+                <div class="form-group">
+                    <label>Book Title</label>
+                    <input type="text" id="book-title" required placeholder="e.g. The Great Gatsby">
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" id="book-author" required placeholder="e.g. F. Scott Fitzgerald">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="book-category" required>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Science">Science & Tech</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Biography">Biography</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Cover Image URL (Optional)</label>
+                    <input type="url" id="book-cover" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Save Book</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-history-modal">&times;</span>
+            <h2>Borrowing History</h2>
+            <h3 id="history-book-title" class="history-title">Book Title</h3>
+            <ul id="history-list" class="history-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

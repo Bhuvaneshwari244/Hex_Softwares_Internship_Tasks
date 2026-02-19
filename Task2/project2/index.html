@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCore Gym | Unleash Your Potential</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">FIT<span class="neon-text">CORE</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#bmi-section">BMI Tool</a></li>
+                <li><a href="#memberships">Plans</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">☰</div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal fade-bottom">
+            <h1 class="glitch" data-text="DEFY YOUR LIMITS.">DEFY YOUR LIMITS.</h1>
+            <p>State-of-the-art equipment. Elite trainers. Your ultimate fitness destination.</p>
+            <a href="#memberships" class="cta-btn neon-border">Join The Core</a>
+        </div>
+    </section>
+
+    <section id="facilities" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title reveal fade-left">Elite <span class="neon-text">Facilities</span></h2>
+            <div class="grid-3">
+                <div class="card reveal fade-up">
+                    <div class="card-icon">🦾</div>
+                    <h3>Strength Zone</h3>
+                    <p>Olympic lifting platforms, premium free weights, and advanced resistance machines.</p>
+                </div>
+                <div class="card reveal fade-up delay-1">
+                    <div class="card-icon">🏃‍♂️</div>
+                    <h3>Cardio Deck</h3>
+                    <p>Interactive treadmills, stair climbers, and rowers overlooking the city skyline.</p>
+                </div>
+                <div class="card reveal fade-up delay-2">
+                    <div class="card-icon">🧊</div>
+                    <h3>Recovery Lab</h3>
+                    <p>Cryotherapy, saunas, and massage therapy to help you bounce back faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bmi-section" class="section bg-black">
+        <div class="container bmi-container reveal fade-right">
+            <div class="bmi-content">
+                <h2 class="section-title text-left">Calculate Your <span class="neon-text">BMI</span></h2>
+                <p>Body Mass Index (BMI) is a simple tool to assess if your weight is in a healthy range. Use our interactive calculator to find out where you stand and how we can help.</p>
+            </div>
+            <div class="bmi-calculator">
+                <div class="input-group">
+                    <input type="number" id="weight" placeholder="Weight in kg" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="height" placeholder="Height in cm" required>
+                </div>
+                <button id="calc-bmi-btn" class="cta-btn neon-bg">Calculate</button>
+                <div id="bmi-result" class="bmi-result-box">
+                    <h4>Your BMI: <span id="bmi-score">--</span></h4>
+                    <p id="bmi-status">Enter your details above.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title reveal fade-left">Our <span class="neon-text">Classes</span></h2>
+            
+            <div class="filter-buttons reveal fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="strength">Strength</button>
+                <button class="filter-btn" data-filter="cardio">Cardio</button>
+                <button class="filter-btn" data-filter="mind">Mind & Body</button>
+            </div>
+
+            <div class="grid-3 class-grid reveal fade-up delay-1">
+                <div class="class-card strength">
+                    <div class="class-img strength-img"></div>
+                    <div class="class-info">
+                        <h3>Powerlifting</h3>
+                        <p>Master the squat, bench, and deadlift.</p>
+                    </div>
+                </div>
+                <div class="class-card cardio">
+                    <div class="class-img cardio-img"></div>
+                    <div class="class-info">
+                        <h3>HIIT Burn</h3>
+                        <p>High-intensity intervals to scorch calories.</p>
+                    </div>
+                </div>
+                <div class="class-card mind">
+                    <div class="class-img yoga-img"></div>
+                    <div class="class-info">
+                        <h3>Vinyasa Yoga</h3>
+                        <p>Flow through poses to build flexibility and core strength.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="memberships" class="section bg-black">
+        <div class="container">
+            <h2 class="section-title reveal fade-down">Choose Your <span class="neon-text">Plan</span></h2>
+            <div class="grid-3 pricing-table">
+                <div class="pricing-card reveal fade-up">
+                    <h3>Basic</h3>
+                    <div class="price"><span>$</span>29<span>/mo</span></div>
+                    <ul>
+                        <li>Gym floor access</li>
+                        <li>Locker rooms</li>
+                        <li class="disabled">Group Classes</li>
+                        <li class="disabled">Recovery Lab</li>
+                    </ul>
+                    <button class="plan-btn">Select</button>
+                </div>
+                <div class="pricing-card featured reveal fade-up delay-1">
+                    <div class="badge neon-bg">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price"><span>$</span>59<span>/mo</span></div>
+                    <ul>
+                        <li>All Basic features</li>
+                        <li>Unlimited Classes</li>
+                        <li>1 PT Session / month</li>
+                        <li class="disabled">Recovery Lab</li>
+                    </ul>
+                    <button class="plan-btn featured-btn neon-bg">Select</button>
+                </div>
+                <div class="pricing-card reveal fade-up delay-2">
+                    <h3>Elite</h3>
+                    <div class="price"><span>$</span>99<span>/mo</span></div>
+                    <ul>
+                        <li>All Pro features</li>
+                        <li>Unlimited Recovery Lab</li>
+                        <li>Monthly Nutrition Plan</li>
+                        <li>Guest Passes</li>
+                    </ul>
+                    <button class="plan-btn">Select</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>FIT<span class="neon-text">CORE</span></h2>
+            <p>&copy; 2026 FitCore Gym. Pushing limits daily.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundSprout | Crowdfunding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">🌱 FundSprout</h1>
+            <ul class="nav-links">
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Start a Project</a></li>
+                <li><a href="#" class="login-btn">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Bring Creative Ideas to Life.</h2>
+            <p>Join a community of backers funding the next big thing in tech, art, and design.</p>
+            <button class="cta-btn">Start a Campaign</button>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="container">
+            <h3 class="section-title">Featured Projects</h3>
+            <div class="projects-grid">
+                
+                <div class="card" data-id="1">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=80" alt="AI Project" class="card-img">
+                    <div class="card-body">
+                        <span class="category">Technology</span>
+                        <h4 class="project-title">Open-Source GenAI Assistant</h4>
+                        <p class="creator">by Bhuvaneshwari Rebba</p>
+                        <p class="description">A revolutionary, privacy-first generative AI coding assistant designed for full-stack developers to streamline workflows locally.</p>
+                        
+                        <div class="stats">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" id="progress-1" style="width: 75%;"></div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="raised">$<span id="raised-1">15000</span> raised</span>
+                                <span class="goal">of $20,000</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="percentage" id="percent-1">75%</span>
+                                <span class="days-left">14 days left</span>
+                            </div>
+                        </div>
+                        <button class="back-btn" onclick="openModal(1, 'Open-Source GenAI Assistant')">Back this Project</button>
+                    </div>
+                </div>
+
+                <div class="card" data-id="2">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Smart Hardware" class="card-img">
+                    <div class="card-body">
+                        <span class="category">Hardware</span>
+                        <h4 class="project-title">EcoSmart Home Hub</h4>
+                        <p class="creator">by GreenTech Innovations</p>
+                        <p class="description">Centralize your smart home devices while automatically reducing your household energy consumption by up to 30%.</p>
+                        
+                        <div class="stats">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" id="progress-2" style="width: 40%;"></div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="raised">$<span id="raised-2">4000</span> raised</span>
+                                <span class="goal">of $10,000</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="percentage" id="percent-2">40%</span>
+                                <span class="days-left">21 days left</span>
+                            </div>
+                        </div>
+                        <button class="back-btn" onclick="openModal(2, 'EcoSmart Home Hub')">Back this Project</button>
+                    </div>
+                </div>
+
+                <div class="card" data-id="3">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=600&q=80" alt="Gaming" class="card-img">
+                    <div class="card-body">
+                        <span class="category">Games</span>
+                        <h4 class="project-title">CyberQuest: Tabletop RPG</h4>
+                        <p class="creator">by Dice & Pixel</p>
+                        <p class="description">A sprawling, cyberpunk-themed board game featuring augmented reality companion apps and deep narrative choices.</p>
+                        
+                        <div class="stats">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" id="progress-3" style="width: 110%;"></div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="raised">$<span id="raised-3">55000</span> raised</span>
+                                <span class="goal">of $50,000</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="percentage" id="percent-3">110%</span>
+                                <span class="days-left">3 days left</span>
+                            </div>
+                        </div>
+                        <button class="back-btn" onclick="openModal(3, 'CyberQuest: Tabletop RPG')">Back this Project</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">✕</span>
+            <h3>Back <span id="modal-project-title" class="highlight">Project</span></h3>
+            <p class="modal-subtitle">Enter your contribution amount below.</p>
+            
+            <form id="contribution-form">
+                <div class="input-group">
+                    <label>Pledge Amount ($)</label>
+                    <input type="number" id="pledge-amount" min="1" required placeholder="e.g., 50">
+                </div>
+                
+                <div class="input-group">
+                    <label>Cardholder Name</label>
+                    <input type="text" required placeholder="Name on card">
+                </div>
+
+                <div class="input-group">
+                    <label>Credit Card Number</label>
+                    <input type="text" required placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+                </div>
+
+                <button type="submit" class="submit-payment-btn">Process Payment</button>
+            </form>
+            <div id="success-msg" class="hidden success-message">
+                🎉 Payment Successful! Thank you for backing this project.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

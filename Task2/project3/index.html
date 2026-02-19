@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Hearts Animal Rescue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">🐾 Paws & <span>Hearts</span></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#gallery">Our Dogs</a></li>
+                <li><a href="#donate" class="nav-donate-btn">Donate</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">☰</div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Give Them a Second Chance at Life.</h1>
+            <p>Every animal deserves a loving home. Join us in our mission to rescue, rehabilitate, and rehome dogs in need.</p>
+            <a href="#donate" class="cta-btn">Help Save a Life Today</a>
+        </div>
+    </header>
+
+    <section id="mission" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Our <span>Mission</span></h2>
+            <p class="mission-text">
+                At Paws & Hearts, we believe that no animal should be left behind. Founded in 2026, our mission is to provide a safe haven for abused, abandoned, and neglected dogs. We strive to heal their physical and emotional wounds and match them with forever families where they can thrive.
+            </p>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Our <span>Programs</span></h2>
+            <div class="grid-3">
+                <div class="program-card">
+                    <div class="program-img rescue-img"></div>
+                    <div class="program-info">
+                        <h3>Rescue & Rehab</h3>
+                        <p>Our emergency response team works around the clock to rescue dogs from dangerous situations and provide veterinary care.</p>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-img foster-img"></div>
+                    <div class="program-info">
+                        <h3>Foster Network</h3>
+                        <p>We rely on our dedicated network of foster heroes who open their homes to dogs, giving them a warm environment to heal.</p>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-img adopt-img"></div>
+                    <div class="program-info">
+                        <h3>Adoption Services</h3>
+                        <p>Our thorough matching process ensures that our rescue dogs find the perfect forever families, creating lifelong bonds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Meet Our <span>Rescues</span></h2>
+            <p class="text-center mission-text" style="margin-bottom: 40px;">These happy faces are just a few of the lives we've transformed together. Many more are still waiting for their forever homes!</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800" alt="Happy rescue dog smiling">
+                    <div class="gallery-overlay"><span>Adopted! ❤️</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800" alt="Cute golden retriever puppy">
+                    <div class="gallery-overlay"><span>Looking for a home</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=800" alt="Cute dog looking up">
+                    <div class="gallery-overlay"><span>Foster needed</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800" alt="Rescue dog playing outdoors">
+                    <div class="gallery-overlay"><span>Adopted! ❤️</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section bg-primary text-white">
+        <div class="container donate-container">
+            <div class="donate-text">
+                <h2>Make a <span>Difference</span></h2>
+                <p>Your contribution directly impacts the lives of dogs in need. It pays for food, shelter, and life-saving medical treatments. Please consider making a donation today.</p>
+            </div>
+            <div class="donate-form-wrapper">
+                <form id="donation-form" class="donate-form">
+                    <h3>Select Donation Amount</h3>
+                    <div class="amount-buttons">
+                        <button type="button" class="amount-btn" data-amount="10">$10</button>
+                        <button type="button" class="amount-btn active" data-amount="25">$25</button>
+                        <button type="button" class="amount-btn" data-amount="50">$50</button>
+                        <button type="button" class="amount-btn" data-amount="100">$100</button>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="custom-amount">Custom Amount ($)</label>
+                        <input type="number" id="custom-amount" min="1" value="25" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="donor-name">Full Name</label>
+                        <input type="text" id="donor-name" required placeholder="John Doe">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Donate Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Paws & Hearts Animal Rescue. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
